@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Standard | Premium Document Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="gold-text">GOLD</span> STANDARD
+            </div>
+            <div class="sidebar-content">
+                <div class="upload-section">
+                    <h3>Document Ingestion</h3>
+                    <div id="drop-zone" class="drop-zone">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M14,13V17H10V13H7L12,8L17,13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z"/></svg>
+                        <p>Drop PDF here or click to upload</p>
+                        <input type="file" id="file-input" accept=".pdf" hidden>
+                    </div>
+                </div>
+                <div class="indexed-docs">
+                    <h3>Indexed Files</h3>
+                    <ul id="file-list">
+                        <li class="empty-msg">No documents indexed yet.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <p>© 2026 Gold Standard RAG</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="workspace-header">
+                <h1>Verification Workspace</h1>
+                <div class="status-badge" id="backend-status">
+                    <span class="status-dot"></span> Backend Offline
+                </div>
+            </header>
+
+            <div class="chat-wrapper">
+                <div id="chat-output" class="chat-output">
+                    <div class="welcome-message">
+                        <h2>Precision Verification</h2>
+                        <p>Upload your sensitive documents to begin the verification process. Our high-fidelity RAG system ensures every answer is backed by your data.</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <div class="input-container">
+                        <input type="text" id="query-input" placeholder="Ask a verification question..." autocomplete="off">
+                        <button id="send-btn" class="send-btn">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification system -->
+    <div id="notifications" class="notifications"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

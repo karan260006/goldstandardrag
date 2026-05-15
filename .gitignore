@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+backend/temp_*
+node_modules/
+.vercel/
+debug_imports.py
+.DS_Store
