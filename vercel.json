@@ -1,17 +1,13 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.py"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "api/index.py", "use": "@vercel/python" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "style.css", "use": "@vercel/static" },
+    { "src": "main.js", "use": "@vercel/static" }
   ],
-  "experimentalServices": {
-    "frontend": {
-      "routePrefix": "/"
-    },
-    "backend": {
-      "entrypoint": "backend",
-      "routePrefix": "/_/backend"
-    }
-  }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "api/index.py" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
 }
